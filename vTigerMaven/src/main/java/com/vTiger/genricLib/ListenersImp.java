@@ -12,7 +12,7 @@ import org.testng.ITestResult;
 
 
 
-public class ListenersImp implements ITestListener
+public class ListenersImp extends Base implements ITestListener
 {
 
 	@Override
@@ -29,29 +29,12 @@ public class ListenersImp implements ITestListener
 
 	@Override
 	public void onTestFailure(ITestResult result) {
-		
+		Utility.takeScreenShot(driver, result);
 		
 	}
 
 	@Override
 	public void onTestSkipped(ITestResult result) {
-		String methodName = result.getMethod().getMethodName();
-		
-		Date d = new Date();
-		String str = d.toString();
-		String[] cmpltDate = str.split(" ");
-		int day = d.getDay();
-		int month = d.getMonth();
-		String year = cmpltDate[5];
-		String time = cmpltDate[3].replace(":", "-");
-		
-//		EventFiringWebDriver ef =  new EventFiringWebDriver(Base.staticDriver);
-		TakesScreenshot ts = (TakesScreenshot)Base.staticDriver;
-		File src = ts.getScreenshotAs(OutputType.FILE);
-		File dest = new File("./ScreenShots/"+methodName+"-"+day+"-"+month+"-"+year+"-"+time+".PNG");
-		
-		
-		
 		
 	}
 

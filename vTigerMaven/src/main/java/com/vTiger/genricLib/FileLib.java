@@ -18,7 +18,7 @@ public class FileLib
 		Properties p = null;
 		try 
 		{
-			FileInputStream fi = new FileInputStream("./src\\com\\vTiger\\commonData\\commonData.properties");
+			FileInputStream fi = new FileInputStream("./src\\main\\java\\com\\vTiger\\commonData\\commonData.properties");
 			p = new Properties();
 			p.load(fi);
 			
@@ -39,7 +39,7 @@ public class FileLib
 		String celVal = null;
 		try
 		{
-			fi = new FileInputStream("./src\\com\\vTiger\\commonData\\product.xlsx");
+			fi = new FileInputStream("./src\\main\\java\\com\\vTiger\\commonData\\product.xlsx");
 			Workbook wb = WorkbookFactory.create(fi);
 			Sheet sh = wb.getSheet(sheetName);
 			celVal = sh.getRow(rowNum).getCell(celNum).getStringCellValue();
@@ -58,7 +58,7 @@ public class FileLib
 		Object[][] data = null;
 		try 
 		{
-			fi = new FileInputStream("./src\\com\\vTiger\\commonData\\product.xlsx");
+			fi = new FileInputStream("./src\\main\\java\\com\\vTiger\\commonData\\product.xlsx");
 			Workbook wb = WorkbookFactory.create(fi);
 			Sheet sh = wb.getSheet(sheetName);
 			
