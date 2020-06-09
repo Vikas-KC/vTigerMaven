@@ -64,34 +64,34 @@ public class CreateOrg
 	}
 	
 	//Business Logic
-	public void clickOrgLink()
-	{
-		createOrgLink.click();
-	}
-	public void clickCreateOrg()
-	{
-		createOrgLink.click();
-	}
-	public void enterOganizationName(String org_name)
-	{
-		accountnameTF.sendKeys(org_name);
-	}
-	public void website(String web)
-	{
-		websiteTF.sendKeys(web);
-	}
-	public void employees(String emp)
-	{
-		employeesTF.sendKeys(emp);
-	}
-	public void industry(String industry)
-	{
-		industryTF.sendKeys(industry);
-	}
-	public void save()
-	{
-		saveButton.click();
-	}
+//	public void clickOrgLink()
+//	{
+//		createOrgLink.click();
+//	}
+//	public void clickCreateOrg()
+//	{
+//		createOrgLink.click();
+//	}
+//	public void enterOganizationName(String org_name)
+//	{
+//		accountnameTF.sendKeys(org_name);
+//	}
+//	public void website(String web)
+//	{
+//		websiteTF.sendKeys(web);
+//	}
+//	public void employees(String emp)
+//	{
+//		employeesTF.sendKeys(emp);
+//	}
+//	public void industry(String industry)
+//	{
+//		industryTF.sendKeys(industry);
+//	}
+//	public void save()
+//	{
+//		saveButton.click();
+//	}
 	public void actualOrgName(String org_name)
 	{
 		String actualOrgName = actualOrganizationName.getText();

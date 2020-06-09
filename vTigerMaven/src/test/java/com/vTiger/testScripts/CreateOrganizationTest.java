@@ -45,19 +45,19 @@ public class CreateOrganizationTest extends Base
 		Reporter.log("cliked on organization link",true);
 		
 //		driver.findElement(By.xpath("//img[@title='Create Organization...']")).click();
-		org.clickCreateOrg();
+		org.getCreateOrgLink();
 		Reporter.log("clicked on create organization link",true);
 		
 //		driver.findElement(By.name("accountname")).sendKeys(Org_name);
-		org.enterOganizationName(Org_name);
+		org.getAccountnameTF();
 		Reporter.log("organization name is entered",true);
 		
 //		driver.findElement(By.name("website")).sendKeys(Org_website);
-		org.website(Org_website);
+		org.getWebsiteTF().sendKeys(Org_website);
 		Reporter.log("Organization website entered",true);
 		
 //		driver.findElement(By.id("employees")).sendKeys(Org_emp);
-		org.employees(Org_emp);
+		org.getEmployeesTF().sendKeys(Org_emp);
 		Reporter.log("Entered Employees",true);
 		
 //		driver.findElement(By.xpath("//select[@name='industry']//option[@value='"+Industry+"']"));
@@ -65,7 +65,7 @@ public class CreateOrganizationTest extends Base
 //		Reporter.log("Selected Industry",true);
 		
 //		driver.findElement(By.xpath("//input[@title='Save [Alt+S]']")).click();
-		org.save();
+		org.getSaveButton();
 		Reporter.log("clicked on save button",true);
 		
 		//verifying the organization created
@@ -75,7 +75,7 @@ public class CreateOrganizationTest extends Base
 		Reporter.log("organization created successfully",true);
 		
 //		driver.findElement(By.linkText("Organizations")).click();
-		org.clickOrgLink();
+		org.getOrganizationsLink();
 		Reporter.log("clicked on organization link link->home page displayed",true);
 	}
 }
