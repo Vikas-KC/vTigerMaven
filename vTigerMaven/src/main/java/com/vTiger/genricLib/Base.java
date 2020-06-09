@@ -67,11 +67,11 @@ public class Base
 		Home home = PageFactory.initElements(driver, Home.class);
 		home.signOut(driver);
 	}
-//	
-//	@AfterClass
-//	public void configAC()
-//	{
-//		driver.quit();
-//	}
+	
+	@AfterClass
+	public void configAC()
+	{
+		driver.quit();
+	}
 	
 }
