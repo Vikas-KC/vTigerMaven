@@ -29,9 +29,6 @@ public class Base
 	@BeforeClass
 	public void configBC()
 	{
-		System.setProperty("webdriver.gecko.driver", "./driver/geckodriver.exe");
-		System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
-		
 		String br=fl.getPropertyKeyValue("browser");
 		System.out.println(br);
 		if(br.equals("chrome"))
