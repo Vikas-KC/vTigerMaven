@@ -3,7 +3,16 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
+      <class name="com.vTiger.testScripts.CreateContactsTest"/>
       <class name="com.vTiger.testScripts.CreateOrganizationTest"/>
+      <class name="com.vTiger.testScripts.CreateVendorTest"/>
+      <class name="com.vTiger.testScripts.CreateInvoiceTest"/>
+      <class name="com.vTiger.testScripts.CreateProductsTest"/>
+      <class name="com.vTiger.testScripts.CreateLeadsTest"/>
+      <class name="com.vTiger.testScripts.CreateOpportunitiesTest"/>
+      <class name="com.vTiger.testScripts.CreateSalesOrderTest"/>
+      <class name="com.vTiger.testScripts.CreateQuotesTest"/>
+      <class name="com.vTiger.testScripts.CreatePurchaseOrderTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -1,7 +1,13 @@
 package com.vTiger.ObjectRepo;
 
+import java.util.Iterator;
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Reporter;
 
 public class CreateContact 
 {
@@ -64,22 +70,22 @@ public class CreateContact
 	}
 
 	//business logic
-	public void firstName(String fn)
+	
+	public void selectOrgName(WebDriver driver,String name)
 	{
-		firstNameTF.sendKeys(fn);
-	}
-	public void lasttName(String ln)
-	{
-		lastNameTF.sendKeys(ln);
-	}
-
-	public void email(String email)
-	{
-		emailTF.sendKeys(email);
-	}
-	public void mobile(String no)
-	{
-		emailTF.sendKeys(no);
+		orgSelectTF.click();
+		Reporter.log("clicked on select Organization button",true);
+		Set<String> setStr = driver.getWindowHandles();
+		Iterator<String> itr = setStr.iterator();
+		String pid = itr.next();
+		String cid = itr.next();
+		
+		driver.switchTo().window(cid);
+		Reporter.log("switched to childe browser",true);
+		driver.findElement(By.linkText(name)).click();
+		Reporter.log("selected Organization name",true);
+		driver.switchTo().window(pid);
+		Reporter.log("switched back to parent browser",true);
 	}
 	public boolean conformation(String name)
 	{
