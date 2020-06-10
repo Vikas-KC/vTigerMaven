@@ -6,6 +6,7 @@
       <class name="com.vTiger.testScripts.CreateOrganizationTest">
         <methods>
           <include name="createOrgTest" invocation-numbers="0"/>
+          <include name="configAC"/>
           <include name="configBC"/>
           <include name="configAM"/>
           <include name="configBM"/>

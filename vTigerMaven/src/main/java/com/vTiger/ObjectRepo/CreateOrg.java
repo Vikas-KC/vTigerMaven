@@ -6,6 +6,9 @@ import org.testng.Assert;
 
 public class CreateOrg 
 {
+	@FindBy(linkText = "Organizations")
+	private WebElement organizationsLink;
+	
 	@FindBy(xpath = "//img[@title='Create Organization...']")
 	private WebElement createOrgLink;
 	
@@ -24,13 +27,16 @@ public class CreateOrg
 	@FindBy(xpath = "//input[@title='Save [Alt+S]']")
 	private WebElement saveButton;
 	
-	@FindBy(xpath = "//span[contains(.,'Organization ')]")
+	@FindBy(xpath = "//span[contains(.,'Organization Information')]")
 	private WebElement actualOrganizationName;
-	
-	@FindBy(xpath = "//a[.='Organizations']")
-	private WebElement organizationsLink;
 
 	//providing getter methods
+	public boolean actualOrgName(String org_name)
+	{
+		String actualOrgName = actualOrganizationName.getText();
+		return actualOrgName.contains(org_name);
+	}
+
 	public WebElement getCreateOrgLink() {
 		return createOrgLink;
 	}
@@ -92,9 +98,5 @@ public class CreateOrg
 //	{
 //		saveButton.click();
 //	}
-	public void actualOrgName(String org_name)
-	{
-		String actualOrgName = actualOrganizationName.getText();
-		Assert.assertTrue(actualOrgName.contains(org_name));
-	}
+	
 }
